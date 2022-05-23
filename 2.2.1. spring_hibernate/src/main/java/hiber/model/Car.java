@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "cars")
 public class Car {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "model")
@@ -14,6 +14,10 @@ public class Car {
 
     @Column(name = "series")
     int series;
+
+    @OneToOne
+    @MapsId
+    private User user;
 
     public Car() {
     }
