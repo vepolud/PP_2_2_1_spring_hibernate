@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Table(name = "cars")
 public class Car {
     @Id
+    @Column(name = "user_id")
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -17,6 +18,7 @@ public class Car {
 
     @OneToOne
     @MapsId
+    @JoinColumn(name = "user_id")
     private User user;
 
     public Car() {
