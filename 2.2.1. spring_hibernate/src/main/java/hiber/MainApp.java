@@ -45,6 +45,8 @@ public class MainApp {
         userService.add(user3);
         userService.add(user4);
 
+        System.out.println(userService.getUser("111", 1));
+
 
 //        userService.addCar(car1);
 
