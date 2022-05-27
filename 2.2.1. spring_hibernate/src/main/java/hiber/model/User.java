@@ -20,8 +20,11 @@ public class User {
    @Column(name = "email")
    private String email;
 
-   @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-   @PrimaryKeyJoinColumn
+//   @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+//   @PrimaryKeyJoinColumn
+
+   @OneToOne (cascade=CascadeType.ALL)
+   @JoinColumn (name="car_id")
    private Car car;
 
    public User() {}
@@ -30,6 +33,10 @@ public class User {
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
+   }
+
+   public void setCar(Car car){
+      this.car = car;
    }
 
    public Long getId() {
