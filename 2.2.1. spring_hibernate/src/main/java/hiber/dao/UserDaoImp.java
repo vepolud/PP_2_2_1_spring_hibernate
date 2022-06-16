@@ -16,7 +16,7 @@ public class UserDaoImp implements UserDao {
 
     private SessionFactory sessionFactory;
     @PersistenceContext
-    EntityManager entityManager;
+    private EntityManager entityManager;
 
     @Autowired
     UserDaoImp(SessionFactory sessionFactory) {
